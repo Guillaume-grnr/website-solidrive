@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Animation du bouton CTA
-        const ctaButton = document.querySelector('.cta-button');
-        ctaButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre intérêt ! Les inscriptions ouvriront bientôt. Nous vous tiendrons informé par email.');
-        });
+//        const ctaButton = document.querySelector('.cta-button');
+ //       ctaButton.addEventListener('click', function(e) {
+//            e.preventDefault();
+ //           alert('Merci pour votre intérêt ! Les inscriptions ouvriront bientôt. Nous vous tiendrons informé par email.');
+ //       });
