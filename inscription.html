@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription - Rallye Solidrive 2026</title>
+    <style>
+        /* Styles spécifiques à la page d'inscription */
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="LOGO sans fond.png" alt="Rallye Solidrive" class="logo-nav">
+            <ul class="nav-links">
+                <li><a href="site_vitrine_moderne.html#accueil">Accueil</a></li>
+                <li><a href="site_vitrine_moderne.html#apropos">L'Aventure</a></li>
+                <li><a href="site_vitrine_moderne.html#evenement">Infos</a></li>
+                <li><a href="site_vitrine_moderne.html#inscription">S'inscrire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="registration-hero">
+        <h1 class="section-title">Formulaire d'Inscription</h1>
+        <p class="section-subtitle">Rejoignez l'équipage pour l'édition 2026</p>
+    </section>
+
+    <div class="form-container">
+        <div class="info-box">
+            L'inscription comprend l'accès au rallye pour un équipage de deux personnes (pilote et copilote), le repas du midi et le cocktail de clôture.
+        </div>
+
+        <form id="rallye-form">
+    <div class="form-section">
+        <h3>Le Pilote</h3>
+        <div class="grid-form">
+            <div class="form-group">
+                <label for="nom-pilote">Nom</label>
+                <input type="text" id="nom-pilote" name="nomPilote" required placeholder="Ex: Dupont">
+            </div>
+            <div class="form-group">
+                <label for="prenom-pilote">Prénom</label>
+                <input type="text" id="prenom-pilote" name="prenomPilote" required placeholder="Jean">
+            </div>
+            <div class="form-group">
+                <label for="tel-pilote">Téléphone</label>
+                <input type="tel" id="tel-pilote" name="telPilote" placeholder="06 00 00 00 00">
+            </div>
+            <div class="form-group">
+                <label for="email-pilote">Email</label>
+                <input type="email" id="email-pilote" name="emailPilote" required placeholder="jean.dupont@exemple.com">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>Le Copilote</h3>
+        <div class="grid-form">
+            <div class="form-group">
+                <label for="nom-copilote">Nom</label>
+                <input type="text" id="nom-copilote" name="nomCopilote" required placeholder="Ex: Dupont">
+            </div>
+            <div class="form-group">
+                <label for="prenom-copilote">Prénom</label>
+                <input type="text" id="prenom-copilote" name="prenomCopilote" required placeholder="Marie">
+            </div>
+            <div class="form-group">
+                <label for="tel-copilote">Téléphone</label>
+                <input type="tel" id="tel-copilote" name="telCopilote" placeholder="06 00 00 00 00">
+            </div>
+            <div class="form-group">
+                <label for="email-copilote">Email</label>
+                <input type="email" id="email-copilote" name="emailCopilote" required placeholder="marie.dupont@exemple.com">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>Le Véhicule</h3>
+        <div class="grid-form">
+            <div class="form-group">
+                <label for="marque">Marque</label>
+                <input type="text" id="marque" name="marque" required placeholder="Ex: Porsche">
+            </div>
+            <div class="form-group">
+                <label for="modele">Modèle</label>
+                <input type="text" id="modele" name="modele" required placeholder="Ex: 911 GT3">
+            </div>
+            <div class="form-group">
+                <label for="annee">Année</label>
+                <input type="number" id="annee" name="annee" min="1900" max="2026" placeholder="2022">
+            </div>
+        </div>
+    </div>
+
+            <div style="height: 100px; position: relative; margin-top: 2rem;">
+                <button type="submit" class="cta-button">
+                    Valider l'inscription
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="LOGO sans fond grand.png" alt="Rallye Solidrive" class="footer-logo">
+            <p>&copy; 2024 Rallye Solidrive - Un Virage Vers L'Espoir</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">En partenariat avec l'Association Flamme de la Vie</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx5ZWN2Qq75A7judgiL-gC2hGvpzbJSDm72-PuLLpnwyOrkwJSn91-EFYa7JDM5jxs/exec';
+const form = document.getElementById('rallye-form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Animation du bouton pendant l'envoi
+    const btn = form.querySelector('.cta-button');
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = "Envoi en cours...";
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            alert('Merci ! Votre inscription pour le Rallye Solidrive 2026 a bien été enregistrée.');
+            form.reset();
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.innerHTML = originalContent;
+        })
+        .catch(error => {
+            console.error('Erreur !', error.message);
+            alert('Désolé, une erreur est survenue. Vérifiez votre connexion ou réessayez plus tard.');
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.innerHTML = originalContent;
+        });
+});
+
+    </script>
+
+    <div id="popup-overlay" class="popup-overlay">
+    <div class="popup-content">
+        <div id="popup-icon" class="popup-icon"></div>
+        <h2 id="popup-title"></h2>
+        <p id="popup-message"></p>
+        <button onclick="closePopup()" class="btn-explore" style="margin-top: 2rem;">Fermer</button>
+    </div>
+</div>
+</body>
+</html>
