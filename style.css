@@ -22,6 +22,8 @@
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
+        
+
 
         nav {
             display: flex;
@@ -45,6 +47,7 @@
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -76,6 +79,40 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+        /* Style spécifique pour le bouton d'inscription dans la nav bar */
+.nav-links a.header-button {
+    background-color: #711e1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    
+    /* On utilise flex pour bien centrer le texte dans le bouton */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Dimensions */
+    width: 140px; /* Augmenté à 140px car "S'INSCRIRE" est assez long */
+    height: 45px;
+    transition: 0.3s;
+    
+    /* Désactivation de l'effet de soulignement existant */
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* On supprime la barre rouge qui apparaît au survol sur les autres liens */
+.nav-links a.header-button::after {
+    display: none;
+}
+
+.nav-links a.header-button:hover {
+    background-color: white;
+    box-shadow: 0 0 0 5px #711e1a;
+    color: #711e1a;
+    transform: translateY(-2px); /* Petit effet de levée au survol */
+}
 
         /* Section Hero */
         .hero {
@@ -749,4 +786,148 @@ display: inline-flex;   /* Aligne correctement le texte et l'icône */
 
 .btn-explore:hover path {
   fill: #711e1a; /* Assure que la flèche reste visible */
+}
+
+        .registration-hero {
+            padding-top: 150px;
+            padding-bottom: 50px;
+            background: linear-gradient(rgba(255, 255, 255, 0.16), #faf8f5), url('vineyard-6399505.jpg');
+
+            background-size: cover;      /* L'image couvre toute la zone sans déformation */
+    background-position: center; /* L'image est centrée (évite de ne voir qu'un coin) */
+    background-repeat: no-repeat;
+    position: relative;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: -50px auto 100px;
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(113, 30, 26, 0.1);
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .form-section h3 {
+            color: #711e1a;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #711e1a;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select {
+            padding: 0.8rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #711e1a;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .info-box {
+            background: rgba(113, 30, 26, 0.05);
+            padding: 1.5rem;
+            border-left: 5px solid #711e1a;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .grid-form { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .form-container { margin: 20px; padding: 1.5rem; }
+        }
+        /* Styles pour la Pop-up */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: none; /* Caché par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: all 0.3s ease;
+}
+
+.popup-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; /* Réserve l'espace pour l'icône */
+}
+
+/* Couleurs selon le statut */
+.success-icon { color: #2ecc71; } /* Vert pour succès */
+.error-icon { color: #e74c3c; }   /* Rouge pour erreur */
+
+.popup-content h2 {
+    color: #711e1a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
