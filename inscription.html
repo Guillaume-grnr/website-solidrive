@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="LOGO sans fond.png">
     <title>Inscription - Rallye Solidrive 2026</title>
     <style>
         /* Styles spécifiques à la page d'inscription */
@@ -18,7 +19,7 @@
                 <li><a href="site_vitrine_moderne.html#accueil">Accueil</a></li>
                 <li><a href="site_vitrine_moderne.html#apropos">L'Aventure</a></li>
                 <li><a href="site_vitrine_moderne.html#evenement">Infos</a></li>
-                <li><a href="site_vitrine_moderne.html#inscription">S'inscrire</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -28,73 +29,190 @@
         <p class="section-subtitle">Rejoignez l'équipage pour l'édition 2026</p>
     </section>
 
-    <div class="form-container">
+    <div id="step-intro" class="form-container" style="text-align: center;">
+    <h2 style="color: #711e1a; margin-bottom: 1rem; text-transform: uppercase;">Votre Pack Rallye 2026</h2>
+    <p style="margin-bottom: 2rem; color: #555; font-size: 1.1rem;">Voici tout ce qui est inclus dans votre inscription pour l'équipage (Pilote & Copilote) :</p>
+
+    <div class="inclusions-grid">
+        <div class="inclusion-item">
+            <div class="icon-circle">
+                <svg class="w-[44px] h-[44px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M11.9925 3.01102c-1.9214.01439-3.85188.37019-6.25505 1.0241-.01805.00491-.03595.01032-.05369.01624-.91244.30416-1.60323.7905-2.06 1.42998C3.16866 6.1185 3 6.83191 3 7.50006c0 .63697.15395 1.45811.5895 2.15498.31425.50276.78203.94286 1.4105 1.17356V19c0 1.1046.89543 2 2 2h10c1.1046 0 2-.8954 2-2v-8.1714c.6285-.2307 1.0962-.6708 1.4105-1.17356C20.846 8.95817 21 8.13703 21 7.50006c0-.66815-.1687-1.38156-.6238-2.01872-.4567-.63948-1.1475-1.12582-2.06-1.42998-.0177-.00592-.0356-.01133-.0536-.01624-2.4032-.65391-4.3337-1.00971-6.2551-1.0241h-.015Z"/>
+                </svg>
+            </div>
+            <h4>Petit déjeuner</h4>
+            <p>Café d'accueil et viennoiseries avant le départ</p>
+        </div>
+
+        <div class="inclusion-item">
+            <div class="icon-circle">
+                <svg class="w-[44px] h-[44px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd" d="M21 11.0001c0-.8815-.3799-1.6731-.984-2.22145.5031-1.33846.2177-2.97144-.9813-3.94213-1.059-.8574-2.4761-.97568-3.6271-.42051-.2908-.39083-.6632-.70423-1.0895-.93179-.8229-.43923-1.8026-.53949-2.7413-.35637-1.2172.23745-2.18257 1.03558-2.68037 2.07405-.08983-.05265-.18224-.10165-.27714-.14661-.86027-.40752-1.89128-.46242-2.91449.05292-1.40603.70815-2.13029 2.35257-1.84394 3.8504-.16121.14468-.30525.31046-.42787.49818C3.13246 9.91685 3 10.4482 3 11.0001c0 .5506.445.9972.99497.9999H20.005c.55-.0027.995-.4493.995-.9999Zm-6.8905-.7654c-.2294-.50238-.8227-.72362-1.325-.49417-.5024.22945-1.0956.00821-1.3251-.49415-.2294-.50237-.0082-1.09562.4942-1.32507 1.5071-.68836 3.2868-.02463 3.9752 1.48247.2294.50236.0082 1.09562-.4942 1.32502-.5024.2295-1.0956.0083-1.3251-.4941Z" clip-rule="evenodd"/>
+                <path fill="currentColor" d="M20.3593 15.2241c.2828-.5949-.195-1.2241-.8537-1.2241H4.49439c-.6587 0-1.1365.6292-.85371 1.2241.85327 1.7951 2.4178 3.2323 4.33593 4.0722V20c0 .5523.44772 1 1 1h6.04679c.5523 0 1-.4477 1-1v-.7037c1.9181-.8399 3.4827-2.2771 4.3359-4.0722Z"/>
+                </svg>
+            </div>
+            <h4>Déjeuner traiteur</h4>
+            <p>Repas complet dans un lieu secret</p>
+        </div>
+
+        <div class="inclusion-item">
+            <div class="icon-circle">
+                <svg class="w-[44px] h-[44px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd" d="M4.00003 7h8.02747c.2487-2.24998 2.1562-4 4.4725-4C18.9853 3 21 5.01472 21 7.5S18.9853 12 16.5 12c-.8801 0-1.702-.2533-2.3956-.6902L11 14.4142V19h2c.5523 0 1 .4477 1 1s-.4477 1-1 1H6.99999c-.55228 0-1-.4477-1-1s.44772-1 1-1h2.00004v-4.5858L3.29292 8.70711c-.286-.286-.37155-.71612-.21677-1.08979C3.23093 7.24364 3.59557 7 4.00003 7ZM16 7h-1.95c.2316-1.14112 1.2405-2 2.45-2C17.8807 5 19 6.11929 19 7.5S17.8807 10 16.5 10c-.3228 0-.6308-.06086-.9138-.17198l1.1209-1.12091c.286-.286.3716-.71612.2168-1.08979C16.7691 7.24364 16.4045 7 16 7Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <h4>Cocktail de clôture</h4>
+            <p>Soirée au Château de La Terrière</p>
+        </div>
+
+        <div class="inclusion-item">
+            <div class="icon-circle">
+                <svg class="w-[44px] h-[44px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd" d="M8.5 2c-.42794 0-.80845.2723-.94652.67736-.03443.10101-.07815.2268-.12882.3726-.1952.56172-.4936 1.42039-.76192 2.30283C6.33766 6.42192 6 7.69926 6 8.57072c0 .10149.00259.20301.00772.30444C6.00262 8.91606 6 8.95772 6 9c0 .10098.01497.19846.0428.29034C6.35415 11.9216 8.33422 14.4001 11 14.9062V20H9c-.55228 0-1 .4477-1 1s.44772 1 1 1h6c.5523 0 1-.4477 1-1s-.4477-1-1-1h-2v-5.0938c2.908-.552 5-3.4513 5-6.33548 0-.86275-.3278-2.12695-.6497-3.1952-.3348-1.11124-.7167-2.17674-.9075-2.70901l-.0015-.00395C16.2989 2.26514 15.9222 2 15.5 2h-7Zm-.44291 6h7.88661c-.088-.54205-.2729-1.26599-.5084-2.0475-.2149-.71327-.4515-1.41069-.6413-1.9525H9.21208c-.18553.53611-.41939 1.22278-.63584 1.93462C8.33663 6.72266 8.14708 7.4535 8.05709 8Z" clip-rule="evenodd"/>
+                </svg>
+            </div>
+            <h4>Visite privée</h4>
+            <p>Découverte du domaine Striffling & dégustation</p>
+        </div>
+
+        <div class="inclusion-item">
+            <div class="icon-circle">
+                <svg class="w-[44px] h-[44px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 7h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C10.4 2.842 8.949 2 7.5 2A3.5 3.5 0 0 0 4 5.5c.003.52.123 1.033.351 1.5H4a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V9a2 2 0 0 0-2-2Zm-9.942 0H7.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM13 14h-2v8h2v-8Zm-4 0H4v6a2 2 0 0 0 2 2h3v-8Zm6 0v8h3a2 2 0 0 0 2-2v-6h-5Z"/>
+                </svg>
+            </div>
+            <h4>Pack cadeaux</h4>
+            <p>Goodies et surprises pour l'équipage</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 3rem; margin-bottom: 2rem;">
+        <p style="font-size: 1.1rem; color: #555; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Tarif unique par équipage</p>
+        <div style="font-size: 3.5rem; font-weight: 800; color: #711e1a; line-height: 1;">
+            150&nbsp€
+        </div>
+        <p style="font-size: 0.9rem; color: #888; font-style: italic; margin-top: 0.5rem;">Tout inclus pour 2 personnes</p>
+    </div>
+    
+    <br>
+
+    <div style="height: 100px; position: relative;">
+        <button id="btn-to-payment" class="cta-button">
+            Passer à l'inscription
+            <div class="icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+</div>
+
+    <div id="step-payment" class="form-container" style="display: none; text-align: center;">
+        <h2 style="color: #711e1a; margin-bottom: 2rem; text-transform: uppercase;">Comment ça marche ?</h2>
+        
+        <div class="process-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Inscription</h3>
+                <p>Remplissez le formulaire avec les informations du pilote, du copilote et du véhicule.</p>
+            </div>
+            
+            <div class="step-separator">➜</div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Paiement</h3>
+                <p>Une fois le formulaire validé, vous recevrez un lien sécurisé par email pour régler votre participation.</p>
+            </div>
+
+            <div class="step-separator">➜</div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Validation</h3>
+                <p>Après réception du paiement, votre équipage sera officiellement validé et vous recevrez votre roadbook !</p>
+            </div>
+        </div>
+
+        <div style="height: 100px; position: relative; margin-top: 3rem;">
+            <button id="btn-to-form" class="cta-button">
+                Accéder au formulaire
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <div id="step-form" class="form-container" style="display: none;">
         <div class="info-box">
-            L'inscription comprend l'accès au rallye pour un équipage de deux personnes (pilote et copilote), le repas du midi et le cocktail de clôture.
+            L'inscription est valable pour un équipage de deux personnes (pilote et copilote).
         </div>
 
         <form id="rallye-form">
-    <div class="form-section">
-        <h3>Le Pilote</h3>
-        <div class="grid-form">
-            <div class="form-group">
-                <label for="nom-pilote">Nom</label>
-                <input type="text" id="nom-pilote" name="nomPilote" required placeholder="Ex: Dupont">
+            <div class="form-section">
+                <h3>Le Pilote</h3>
+                <div class="grid-form">
+                    <div class="form-group">
+                        <label for="nom-pilote">Nom</label>
+                        <input type="text" id="nom-pilote" name="nomPilote" required placeholder="Ex: Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom-pilote">Prénom</label>
+                        <input type="text" id="prenom-pilote" name="prenomPilote" required placeholder="Jean">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-pilote">Téléphone</label>
+                        <input type="tel" id="tel-pilote" name="telPilote" placeholder="06 00 00 00 00">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-pilote">Email</label>
+                        <input type="email" id="email-pilote" name="emailPilote" required placeholder="jean.dupont@exemple.com">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="prenom-pilote">Prénom</label>
-                <input type="text" id="prenom-pilote" name="prenomPilote" required placeholder="Jean">
-            </div>
-            <div class="form-group">
-                <label for="tel-pilote">Téléphone</label>
-                <input type="tel" id="tel-pilote" name="telPilote" placeholder="06 00 00 00 00">
-            </div>
-            <div class="form-group">
-                <label for="email-pilote">Email</label>
-                <input type="email" id="email-pilote" name="emailPilote" required placeholder="jean.dupont@exemple.com">
-            </div>
-        </div>
-    </div>
 
-    <div class="form-section">
-        <h3>Le Copilote</h3>
-        <div class="grid-form">
-            <div class="form-group">
-                <label for="nom-copilote">Nom</label>
-                <input type="text" id="nom-copilote" name="nomCopilote" required placeholder="Ex: Dupont">
+            <div class="form-section">
+                <h3>Le Copilote</h3>
+                <div class="grid-form">
+                    <div class="form-group">
+                        <label for="nom-copilote">Nom</label>
+                        <input type="text" id="nom-copilote" name="nomCopilote" required placeholder="Ex: Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom-copilote">Prénom</label>
+                        <input type="text" id="prenom-copilote" name="prenomCopilote" required placeholder="Marie">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-copilote">Téléphone</label>
+                        <input type="tel" id="tel-copilote" name="telCopilote" placeholder="06 00 00 00 00">
+                    </div>
+                    <div class="form-group">
+                        <label for="email-copilote">Email</label>
+                        <input type="email" id="email-copilote" name="emailCopilote" required placeholder="marie.dupont@exemple.com">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="prenom-copilote">Prénom</label>
-                <input type="text" id="prenom-copilote" name="prenomCopilote" required placeholder="Marie">
-            </div>
-            <div class="form-group">
-                <label for="tel-copilote">Téléphone</label>
-                <input type="tel" id="tel-copilote" name="telCopilote" placeholder="06 00 00 00 00">
-            </div>
-            <div class="form-group">
-                <label for="email-copilote">Email</label>
-                <input type="email" id="email-copilote" name="emailCopilote" required placeholder="marie.dupont@exemple.com">
-            </div>
-        </div>
-    </div>
 
-    <div class="form-section">
-        <h3>Le Véhicule</h3>
-        <div class="grid-form">
-            <div class="form-group">
-                <label for="marque">Marque</label>
-                <input type="text" id="marque" name="marque" required placeholder="Ex: Porsche">
+            <div class="form-section">
+                <h3>Le Véhicule</h3>
+                <div class="grid-form">
+                    <div class="form-group">
+                        <label for="marque">Marque</label>
+                        <input type="text" id="marque" name="marque" required placeholder="Ex: Porsche">
+                    </div>
+                    <div class="form-group">
+                        <label for="modele">Modèle</label>
+                        <input type="text" id="modele" name="modele" required placeholder="Ex: 911 GT3">
+                    </div>
+                    <div class="form-group">
+                        <label for="annee">Année</label>
+                        <input type="number" id="annee" name="annee" min="1900" max="2026" placeholder="2022">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="modele">Modèle</label>
-                <input type="text" id="modele" name="modele" required placeholder="Ex: 911 GT3">
-            </div>
-            <div class="form-group">
-                <label for="annee">Année</label>
-                <input type="number" id="annee" name="annee" min="1900" max="2026" placeholder="2022">
-            </div>
-        </div>
-    </div>
 
             <div style="height: 100px; position: relative; margin-top: 2rem;">
                 <button type="submit" class="cta-button">
@@ -117,40 +235,130 @@
             <p style="margin-top: 1rem; opacity: 0.8;">En partenariat avec l'Association Flamme de la Vie</p>
         </div>
     </footer>
+    <script src="https://animatedicons.co/scripts/embed-animated-icons.js"></script>
 
-    <script src="script.js"></script>
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("Le script d'inscription est chargé !");
+
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx5ZWN2Qq75A7judgiL-gC2hGvpzbJSDm72-PuLLpnwyOrkwJSn91-EFYa7JDM5jxs/exec';
-const form = document.getElementById('rallye-form');
+        const form = document.getElementById('rallye-form');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupTitle = document.getElementById('popup-title');
+        const popupMessage = document.getElementById('popup-message');
+        const popupIcon = document.getElementById('popup-icon');
+        // Gestion du passage de l'intro au formulaire
+        const stepIntro = document.getElementById('step-intro');
+        const stepPayment = document.getElementById('step-payment');
+        const stepForm = document.getElementById('step-form');
+        
+        const btnToPayment = document.getElementById('btn-to-payment');
+        const btnToForm = document.getElementById('btn-to-form');
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    // Animation du bouton pendant l'envoi
-    const btn = form.querySelector('.cta-button');
-    btn.disabled = true;
-    btn.style.opacity = "0.7";
-    const originalContent = btn.innerHTML;
-    btn.innerHTML = "Envoi en cours...";
+        // Fonction générique pour changer d'étape
+        function switchStep(currentStep, nextStep) {
+            currentStep.style.opacity = '0';
+            setTimeout(() => {
+                currentStep.style.display = 'none';
+                nextStep.style.display = 'block';
+                nextStep.style.opacity = '0';
+                setTimeout(() => {
+                    nextStep.style.opacity = '1';
+                    nextStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 50);
+            }, 300);
+        }
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            alert('Merci ! Votre inscription pour le Rallye Solidrive 2026 a bien été enregistrée.');
-            form.reset();
-            btn.disabled = false;
-            btn.style.opacity = "1";
-            btn.innerHTML = originalContent;
-        })
-        .catch(error => {
-            console.error('Erreur !', error.message);
-            alert('Désolé, une erreur est survenue. Vérifiez votre connexion ou réessayez plus tard.');
-            btn.disabled = false;
-            btn.style.opacity = "1";
-            btn.innerHTML = originalContent;
+        // Clic : Intro -> Paiement
+        if(btnToPayment) {
+            btnToPayment.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchStep(stepIntro, stepPayment);
+            });
+        }
+
+        // Clic : Paiement -> Formulaire
+        if(btnToForm) {
+            btnToForm.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchStep(stepPayment, stepForm);
+            });
+        }
+
+        // Fonction globale de fermeture
+        window.closePopup = function() {
+            if(popupOverlay) popupOverlay.classList.remove('active');
+        };
+
+        if (popupOverlay) {
+            popupOverlay.addEventListener('click', (e) => {
+                if (e.target === popupOverlay) closePopup();
+            });
+        }
+
+        if (!form) return;
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            const btn = form.querySelector('.cta-button');
+            const originalContent = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.style.opacity = "0.7";
+            btn.innerHTML = "Envoi en cours...";
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // --- SUCCÈS ---
+                    popupTitle.textContent = "Inscription Réussie !";
+                    popupTitle.style.color = "#2ecc71"; // Vert pour le texte "Succès" (ou #711e1a si tu préfères tout rouge)
+                    popupMessage.innerHTML = "Merci ! Votre équipage est pré-inscrit pour le <strong>Rallye Solidrive 2026</strong>.<br>Vous recevrez bientôt un email pour régler les frais d'inscription.";
+                    
+                    // Icône Animée Succès (Avec le rouge bordeaux #711e1a)
+                    popupIcon.innerHTML = `
+                        <animated-icons
+                            src="https://animatedicons.co/get-icon?name=Success&style=minimalistic&token=2cb0da6b-0dad-4d02-8599-79b76c0333fb"
+                            trigger="loop"
+                            attributes='{"variationThumbColour":"#711e1a","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":1,"defaultColours":{"group-1":"#000000","group-2":"#711e1a","background":"#FFFFFF"}}'
+                            height="150"
+                            width="150"
+                        ></animated-icons>`;
+                    
+                    popupOverlay.classList.add('active');
+                    form.reset();
+                    
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    btn.innerHTML = originalContent;
+                })
+                .catch(error => {
+                    // --- ERREUR ---
+                    console.error('Erreur !', error.message);
+                    popupTitle.textContent = "Erreur";
+                    popupTitle.style.color = "#711e1a"; 
+                    popupMessage.textContent = "Une erreur est survenue lors de l'envoi. Vérifiez votre connexion internet.";
+                    
+                    // Icône Animée Erreur (Avec le rouge bordeaux #711e1a)
+                    popupIcon.innerHTML = `
+                        <animated-icons
+                            src="https://animatedicons.co/get-icon?name=Error&style=minimalistic&token=0c38d9a8-cd4e-4a0f-9b7a-66d9e2368dc0"
+                            trigger="loop"
+                            attributes='{"variationThumbColour":"#711e1a","variationName":"Two Tone","variationNumber":2,"numberOfGroups":2,"backgroundIsGroup":false,"strokeWidth":1,"defaultColours":{"group-1":"#000000","group-2":"#711e1a","background":"#FFFFFF"}}'
+                            height="150"
+                            width="150"
+                        ></animated-icons>`;
+                    
+                    popupOverlay.classList.add('active');
+                    
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    btn.innerHTML = originalContent;
+                });
+            });
         });
-});
-
     </script>
+    
 
     <div id="popup-overlay" class="popup-overlay">
     <div class="popup-content">
