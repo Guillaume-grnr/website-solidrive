@@ -1064,3 +1064,62 @@ display: inline-flex;   /* Aligne correctement le texte et l'icône */
         width: 100%;
     }
 }
+
+/* --- RESPONSIVE MOBILE POUR LES CARTES --- */
+@media (max-width: 968px) {
+    
+    /* 1. Ajustement du conteneur principal de la carte */
+    .card {
+        padding: 90px 20px 20px 20px; /* Plus d'espace en haut pour ne pas être caché par le menu */
+        height: auto;       /* On laisse la hauteur s'adapter au contenu */
+        min-height: 80vh;   /* On garde une hauteur minimale pour l'effet de superposition */
+        display: flex;
+        align-items: flex-start; 
+    }
+
+    /* 2. Le contenu de la carte passe en colonne (vertical) */
+    .card-content {
+        flex-direction: column; /* Empile les éléments verticalement */
+        height: auto;           /* La hauteur s'adapte au contenu */
+        min-height: auto;       /* On enlève la contrainte de hauteur fixe */
+        padding: 1.5rem;        /* On réduit le padding interne */
+        gap: 1.5rem;            /* Espace entre l'image et le texte */
+    }
+
+    /* 3. On force l'image à être visible et au-dessus */
+    .card-image {
+        width: 100%;
+        height: 220px;         /* Hauteur fixe pour garantir que la photo est visible ! */
+        flex: none;            /* On empêche l'image de s'écraser */
+        order: -1;             /* L'image passe TOUJOURS en premier (au-dessus du texte) */
+    }
+
+    .card-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;     /* L'image remplit le cadre sans être déformée */
+        border-radius: 15px;   /* Arrondi des coins */
+    }
+
+    /* 4. Ajustement du texte */
+    .card-text {
+        width: 100%;
+        text-align: center;    /* Le texte centré est plus joli sur mobile */
+        padding: 0;
+    }
+
+    .card-content h2 {
+        font-size: 1.6rem;     /* Titre un peu plus petit */
+        margin-bottom: 1rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;       /* Texte de paragraphe lisible */
+    }
+
+    /* 5. Centrage des boutons */
+    .btn-explore {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
