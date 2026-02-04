@@ -931,3 +931,136 @@ display: inline-flex;   /* Aligne correctement le texte et l'icône */
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
+
+/* Styles pour la grille des inclusions */
+.inclusions-grid {
+    display: flex;           /* On utilise Flexbox au lieu de Grid */
+    flex-wrap: wrap;         /* Permet aux éléments de passer à la ligne */
+    justify-content: center; /* Centre les éléments (les 2 du bas seront centrés) */
+    gap: 2rem;               /* Espace entre les éléments */
+    margin: 3rem auto;       /* Marge verticale et centrage horizontal du bloc */
+    max-width: 1000px;       /* Largeur max pour garder la mise en page propre */
+}
+
+.inclusion-item {
+    flex: 0 0 30%;           /* Force la largeur à 30% (donc 3 items par ligne max) */
+    min-width: 200px;        /* Sécurité pour les petits écrans (passera en colonne si trop petit) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Le reste des styles (icon-circle, h4, p) reste identique... */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: rgba(113, 30, 26, 0.08);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #711e1a;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.inclusion-item:hover .icon-circle {
+    transform: scale(1.1);
+    background: rgba(113, 30, 26, 0.15);
+}
+
+.inclusion-item h4 {
+    color: #711e1a;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.inclusion-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+#step-intro, #step-form {
+    transition: opacity 0.3s ease;
+}
+
+/* Container des étapes */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+/* Carte individuelle d'étape */
+.step-card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    position: relative;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #711e1a;
+}
+
+/* Numéro (1, 2, 3) */
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #711e1a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem; /* Centré horizontalement */
+}
+
+.step-card h3 {
+    color: #2c1810;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Flèche de séparation */
+.step-separator {
+    align-self: center;
+    font-size: 2rem;
+    color: #711e1a;
+    opacity: 0.5;
+}
+
+/* Responsive : passage en colonne sur mobile */
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .step-separator {
+        transform: rotate(90deg); /* La flèche pointe vers le bas */
+        margin: -1rem 0; /* Réduit l'espace vertical */
+    }
+    
+    .step-card {
+        width: 100%;
+    }
+}
